@@ -611,11 +611,6 @@ def run(bRun=None):
     #if engine.rootObjects(): qApp.exec_()
     #del engine
 
-if(sys.argv[0] != ""):
-    engine=run();
-    qApp.exec()
-    del engine
-
 #=======================================
 
 import threading
@@ -775,3 +770,9 @@ class AIThread:
             func()
         
 aiThread = AIThread()
+
+
+if(sys.argv[0] != ""):
+    engine=run();
+    qApp.exec()
+    del engine
